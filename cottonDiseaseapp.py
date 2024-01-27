@@ -6,8 +6,8 @@ import PIL
 import streamlit as st
 
 # Local Modules
-import settings
-import helper
+import cottonDiseasesettings as settings
+import cottonDiseasehelper as helper
 
 # Setting page layout
 st.set_page_config(
