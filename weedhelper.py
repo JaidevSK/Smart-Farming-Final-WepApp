@@ -3,7 +3,7 @@ import time
 import streamlit as st
 import cv2
 
-import settings
+import weedsettings as settings
 
 
 def load_model(model_path):
