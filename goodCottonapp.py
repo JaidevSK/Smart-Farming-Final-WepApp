@@ -6,8 +6,8 @@ import PIL
 import streamlit as st
 
 # Local Modules
-import settings
-import helper
+import goodCottonsettings as settings
+import goodCottonhelper as helper
 
 # Setting page layout
 st.set_page_config(
