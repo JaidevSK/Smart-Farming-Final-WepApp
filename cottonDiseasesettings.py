@@ -20,11 +20,4 @@ IMAGE = 'Image'
 SOURCES_LIST = [IMAGE]
 
 # ML Model config
-MODEL_DIR = ROOT / 'weights'
-DETECTION_MODEL = MODEL_DIR / 'vege.pt'
-# In case of your custome model comment out the line above and
-# Place your custom model pt file name at the line below 
-# DETECTION_MODEL = MODEL_DIR / 'my_detection_model.pt'
-
-SEGMENTATION_MODEL = MODEL_DIR / 'yolov8n-seg.pt'
-
+DETECTION_MODEL = 'https://github.com/JaidevSK/Smart-Farming-Final-WepApp/blob/main/CottonDiseaseYOLOv8.pt'
