@@ -7,7 +7,7 @@ import streamlit as st
 
 # Local Modules
 import weedsettings as settings
-import weedhelper as settings
+import weedhelper as helper
 
 # Setting page layout
 st.set_page_config(
