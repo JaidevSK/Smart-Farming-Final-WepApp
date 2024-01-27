@@ -11,21 +11,16 @@ import cottonLifeCyclehelper as helper
 
 # Setting page layout
 st.set_page_config(
-    page_title="VegetableVision",
-    page_icon=":tomato:",
+    page_title="Cotton Life Cycle Stage Detector",
+    page_icon="🌱",
     layout="wide",
     initial_sidebar_state="expanded"
 )
 
 # Main page heading
-st.title("Vegetable Detection using YOLOv8")
-
+st.markdown("<h1 style='text-align: center;'>Cotton Life Cycle Stage Detector</h1>", unsafe_allow_html=True)
 # Sidebar
 st.sidebar.header("Select the Configuration")
-
-# # Model Options
-# model_type = st.sidebar.radio(
-#     "Select Task", ['Detection', 'Segmentation'])
 
 confidence = float(st.sidebar.slider(
     "Select Model Confidence", 25, 100, 40)) / 100
