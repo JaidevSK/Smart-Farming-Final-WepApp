@@ -8,14 +8,21 @@ Created on Sat Dec  9 12:01:07 2023
 import PIL
 import streamlit as st
 
+
+st.set_page_config(
+    page_title="Field Image Viewer",
+    page_icon="📷",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
+
 f_5m=PIL.Image.open("img5m.jpg")
 f_30m=PIL.Image.open("img30m.jpg")
 f_50m=PIL.Image.open("img50m.jpg")
 f_100m=PIL.Image.open("img100m.jpg")
 f_120m=PIL.Image.open("img120m.jpg")
+st.markdown("<h1 style='text-align: center;'>Field Map (Drone View)</h1>", unsafe_allow_html=True)
 
-st.title("Project Smart Farming")
-st.header("Field Map (Drone View)")
 st.write("Provides the view of the field map from various heights in an interactive way.")
 
 height = st.select_slider('Altitude', options=[10,30,50,75,100])
@@ -65,20 +72,3 @@ elif height == 100:
     f_100m1 = f_120m.crop((left, top, right, bottom))
     st.image(f_100m1)
 
-
-
-
-
-st.sidebar.link_button("Go to Data Uploading Page", "https://project-smart-farming-vd6eonndrahxbzdq7sybvv.streamlit.app/")
-st.sidebar.link_button("Go to Datalog", "https://project-smart-farming-ynd8tuet7bvfplkmbdmt8t.streamlit.app/")
-st.sidebar.link_button("Go to Image Viewer", "https://project-smart-farming-zdgdgxvdjwjhzdjayfsoyj.streamlit.app/")
-st.sidebar.link_button("Go to Weed Density Visualiser", "https://project-smart-farming-ztxhdu7jtbbvnpgpujlfdg.streamlit.app/")
-st.sidebar.link_button("Go to Yield Prediction Page", "https://project-smart-farming-bbtrh6txamftuhp2svgrf4.streamlit.app/")
-st.sidebar.link_button("Go to Soil Suitability Analysis Page", "https://project-smart-farming-rl8ttyplxcidujmvjqzdtt.streamlit.app/")
-st.sidebar.link_button("Go to Type-Wise Weed Distribution Page", "https://project-smart-farming-gu7k3hxuvkcajs3jjqbbzo.streamlit.app/")
-st.sidebar.link_button("Go to Crop Density Distribution Page", "https://project-smart-farming-gu7k3hxuvkcajs3jjqbbzo.streamlit.app/")
-st.sidebar.link_button("Go to Cotton Bud Lifecycle Stage Distribution Page", "https://project-smart-farming-gu7k3hxuvkcajs3jjqbbzo.streamlit.app/")
-st.sidebar.link_button("Go to Disease, Pest and Deficiency distribution Page", "https://project-smart-farming-gu7k3hxuvkcajs3jjqbbzo.streamlit.app/")
-st.sidebar.link_button("Go to  Cotton Bud Counter and Visualiser Page", "https://project-smart-farming-gu7k3hxuvkcajs3jjqbbzo.streamlit.app/")
-st.sidebar.link_button("Go to Weather, Prices and other Information Page", "https://mausam.imd.gov.in/imd_latest/contents/satellite.php")
-st.sidebar.link_button("Go to Main Page", "https://project-smart-farming-vefkkxyjh72zcdmf4pgzbs.streamlit.app/")
