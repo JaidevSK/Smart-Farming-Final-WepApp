@@ -11,30 +11,22 @@ import cottonDiseasehelper as helper
 
 # Setting page layout
 st.set_page_config(
-    page_title="VegetableVision",
-    page_icon=":tomato:",
+    page_title="CottonDisease",
+    page_icon=":cockroach:",
     layout="wide",
     initial_sidebar_state="expanded"
 )
 
 # Main page heading
-st.title("Vegetable Detection using YOLOv8")
+st.markdown("<h1 style='text-align: center;'>Cotton Disease and Pest Detection</h1>", unsafe_allow_html=True)
 
 # Sidebar
 st.sidebar.header("Select the Configuration")
 
-# # Model Options
-# model_type = st.sidebar.radio(
-#     "Select Task", ['Detection', 'Segmentation'])
 
 confidence = float(st.sidebar.slider(
     "Select Model Confidence", 25, 100, 40)) / 100
 
-# # Selecting Detection Or Segmentation
-# if model_type == 'Detection':
-#     model_path = Path(settings.DETECTION_MODEL)
-# elif model_type == 'Segmentation':
-#     model_path = Path(settings.SEGMENTATION_MODEL)
 model_path = Path(settings.DETECTION_MODEL)
 
 
