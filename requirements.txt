@@ -41,6 +41,7 @@ nvidia-cusolver-cu11==11.4.0.1
 nvidia-cusparse-cu11==11.7.4.91
 nvidia-nccl-cu11==2.14.3
 nvidia-nvtx-cu11==11.7.91
+openai
 opencv-python-headless==4.8.0.76
 packaging==23.1
 pandas==2.0.3
@@ -68,6 +69,7 @@ seaborn==0.12.2
 six==1.16.0
 smmap==5.0.0
 streamlit==1.26.0
+streamlit_chat
 sympy==1.12
 tenacity==8.2.3
 toml==0.10.2
